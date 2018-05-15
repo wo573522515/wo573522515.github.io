@@ -21,21 +21,31 @@
         .b{width: 600px;
             }
         ul{padding: 0px;
+
         }
         .c>li{
-            
+        box-sizing: border-box;
+
+        /* padding-top: auto;
+        padding-bottom: auto; */
             list-style: none;
-            width: 174px;
-            height: 34px;
+            width: 180px;
+            line-height: 40px;
         background-color: pink;    
         border: 3px solid black;
-        margin: 15px;
+        margin-left: 0px;
+        margin-right:30px;
+        margin-bottom: 15px;
+        margin-top: 0px;
+        display: inline-block;
+        
         }
-        .c>li:hover{background: red;}
+        .c>li:nth-child(3n+3){margin-right: 0px;}
+        /* .c>li:hover{background: red;}
         .c>li:nth-child(-n+4){margin-left: 0px;}
         .c>li:nth-child(n+5){margin-left: 210px;}
         .c>li:nth-child(n+9){margin-left: 420px;}  
-        .c>li:nth-child(4n+5){margin-top: -220px;}
+        .c>li:nth-child(4n+5){margin-top: -220px;} */
         .d>li{
             list-style: none;
             border-bottom: 1px dotted black;
@@ -51,18 +61,18 @@
     <div class="a main"><p class="main">hello world 请调整浏览器窗口大小查看效果</p></div>
     <div class="b main">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px  页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</div>
     <ul class="c main">
-        <li>宽180高40（包含边框）</li>
-        <li>水平间隙30px</li>
-        <li>垂直间隙15px</li>
-        <li>边框宽度3px</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
-        <li>产品</li>
+        <li>宽180高40（包含边框）</li><!--
+    --><li>水平间隙30px</li><!--
+        --><li>垂直间隙15px</li><!--
+        --><li>边框宽度3px</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li><!--
+        --><li>产品</li>
     </ul>
     <ul class="d main">
         <li>link</li>
