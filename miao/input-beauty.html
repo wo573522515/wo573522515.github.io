@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{padding: 0;margin: 0;}
+        div{
+            height: 100px;
+            line-height: 100px;
+            color: black;
+            border: 2px dashed black;
+            background-color: aqua;
+            box-sizing: border-box;
+            border-radius: 33% 43% 53% 63%;
+            text-align: center;
+            margin: 20%;
+            margin-left: 30%;
+            margin-right: 30%;
+            width: auto;
+            font-size: 16px;
+            transition: border-radius 0.3s linear;
+        }
+        div:hover{
+            border-radius: 0%;
+        }
+        div:active{
+            border: 2px solid black;
+        }
+        .a{
+           vertical-align: middle;
+        }
+        .b{
+            font-size: 16px;
+        }
+            
+    </style>
+</head>
+<body>
+    <div>foo<input type="checkbox" class="a">我我我<input type="text" class="b"></div>
+</body>
+</html>
