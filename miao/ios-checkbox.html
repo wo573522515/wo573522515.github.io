@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display:inline-block;
+            margin:0;
+            padding: 0;
+            margin-left: 15px;
+            height: 30px;
+            padding-top: 15px;
+        }
+        input{
+            display: none;
+        }
+        input + label{
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+            position: relative;
+            border-radius: 99999px;
+            text-indent: -99999px;
+            background-color: #aaa;
+            border:2px solid black;
+            transition:box-shadow .4s;
+            box-shadow: 0 0 0 0 rgb(153, 204, 51) inset;            
+        }
+        input:checked + label {
+            transition:box-shadow .4s;
+            box-shadow: 0 0 0 10px rgb(153, 204, 51) inset;
+        }
+        label::before{
+            content:'';
+            display:inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            bottom:3px;
+            box-shadow: 0 2px 2px #6669;
+            transition: left .5s;
+        }
+        input:checked + label::before{
+            transition: left .5s;
+            left: calc(100% - 18px);
+        }
+        label:active::before{
+            width: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="check">
+        <label for="check">asd</label>
+    </div>
+</body>
+</html>

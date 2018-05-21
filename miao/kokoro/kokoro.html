@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 100px;
+            height: 100px;
+            background-image: url(kokoro.png);
+            background-repeat: no-repeat;
+            position: relative;
+            animation: kokoro 2s infinite  steps(29);
+        }
+        @keyframes kokoro{
+            to{background-position: -2900px 0;}
+        } */
+        input{
+            display: none;
+        }
+
+        input + label{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            background-image:url(kokoro.png);
+        }
+        input:checked + label{
+            transition: 0.5s  steps(28);
+            background-position: -2800px 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="star">
+    <label for="star"></label>
+</body>
+</html>
