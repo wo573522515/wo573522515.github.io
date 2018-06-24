@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script id="ch0105/01"> //求平均年龄
+        var n =Number(prompt("请输入学生的人数",""))
+        for(var i = 1,x = 0,s = 0;i <= n;i++){
+            x = Number(prompt("请输入第"+ i +"个学生的年龄"))
+            s = s + x
+        }
+        console.log((s/n).toFixed(2))
+    </script> -->
+
+    <!-- <script id="ch0105/02">//财务管理
+        for(var i = 1,s = 0,money = 0;i <= 12;i++){
+            money = Number(prompt("请输入第"+ i + "个月的结余"))
+            s = s + money
+        }
+        console.log("$"+(s/12).toFixed(2))
+    </script> -->
+
+    <!-- <script id="ch0105/03">//均值
+        var n = Number(prompt("请输入样本容量(容量小于100)"))
+        for(var i = 1,x = 0,s = 0;i <= n;i++){
+            x = Number(prompt("请输入第"+ i +"个样本数据(-1000到1000之间的数)"))
+            while(x > 1000||x < -1000){
+                x = Number(prompt("请输入第"+ i +"个样本数据(-1000到1000之间的数)"))
+            }
+            s = s + x
+        }
+        console.log((s/n).toFixed(4))
+    </script> -->
+
+    <!-- <script id="ch0105/04">//求整数的和与均值
+        var n =Number(prompt("请共有几个整数"))
+        for(var i = 1,x = 0,s = 0;i <= n;i++){
+            x = Number(prompt("请输入第"+ i +"个整数(-10000到10000之间的数)"))
+            while(x > 10000||x < -10000){
+                x = Number(prompt("请输入第"+ i +"个整数(-10000到10000之间的数)"))
+            }
+            s = s + x
+        }
+        console.log(s + " " +(s/n).toFixed(5))
+    </script> -->
+
+    <!-- <script id="ch0105/05">//最高的分数
+      var n = Number(prompt("请输入参加这次考试的人数"))
+      for(var i = 1,x = 0,s = 0;i <= n;i++){
+            x = Number(prompt("请输入第"+ i +"个学生的成绩"))
+            if(s < x){
+                s = x
+            }else{
+                s = s
+            }
+      }
+      console.log(s)  
+    </script> -->
+
+    <!-- <script id="ch0105/06">//整数序列的元素最大跨度值
+        var n = Number(prompt("请输入序列的个数"))
+        for(var i = 1,x = 0,max = 0,min = 1000;i <= n;i++){
+            x = Number(prompt("请输入第"+ i + "个序列"))
+            if(max < x){
+                max = x
+            }else{
+                max = max
+            }
+            if(min > x){
+                min = x
+            }else{
+                min = min
+            }
+        }
+        console.log(max-min)
+    </script> -->
+
+    <!-- <script id="ch0105/07">//奥运奖牌计数
+        var n = Number(prompt("请输入参与决赛的天数"))
+        for(var i = 1,j,y,t,a = 0,b = 0,c = 0;i <=n;i++){
+            j = Number(prompt("请输入第"+ i + "天金牌数"))
+            y = Number(prompt("请输入第"+ i + "天银牌数"))
+            t = Number(prompt("请输入第"+ i + "天铜牌数"))
+            a = a + j
+            b = b + y
+            c = c + t
+        }
+        console.log(a + " " + b + " " + c + " " + (a+b+c))
+    </script> -->
+
+    <!-- <script id="ch0105/08">//多边形内角和
+        var n = Number(prompt("请输入为几边形"))
+        for(var i = 1,x,s = 0;i <n;i++){
+            x = Number(prompt("请输入第"+ i + "个角度"))
+            s = s + x
+        }
+        console.log((n-2)*180-s)
+    </script> -->
+
+    <!-- <script id="ch0105/09">//奇数求和
+        var m = Number(prompt("请输入m"))
+        var n = Number(prompt("请输入n"))
+        for(var i = m,s = 0;i <= n;i++){
+            if(i%2 !== 0){
+                s = s + i
+            }
+        }
+        console.log(s)
+    </script> -->
+
+    <!-- <script id="ch0105/10">//满足条件的数累加
+        var m = Number(prompt("请输入m"))
+        var n = Number(prompt("请输入n"))
+        for(var i = m,s = 0;i <= n;i++){
+            if(i%17 === 0){
+                s = s + i
+            }
+        }
+        console.log(s)
+    </script> -->
+
+    <!-- <script id="ch0105/11">//整数的个数
+        var n = Number(prompt("请输入整数个数"))
+        for(var i = 1,x,s = 0,p = 0,q = 0 ;i <= n;i++){
+            x = Number(prompt("请输入第" + i + "整数"))
+            if(x === 1){
+                s++
+            }else if (x === 5){
+                p++
+            }else if (x === 10){
+                q++
+            }
+        }
+        console.log(s)
+        console.log(p)
+        console.log(q)
+    </script> -->
+
+    <!-- <script id="ch0105/12">//与指定数字相同的数的个数
+        var n = Number(prompt("请输入序列长度"))
+        var m = Number(prompt("请输入指定数字"))
+        for(var i = 1,s = 0,x;i <= n;i++){
+            x = Number(prompt("请输入第" + i + "整数"))
+            if(x === m){
+                s++
+            }
+        }
+        console.log(s)
+    </script> -->
+
+    <!-- <script id="ch0105/13">//乘方计算
+        var a = Number(prompt("请输入整数a(-1000000 <= a <= 1000000)"))
+        var n = Number(prompt("请输入n(1 <= n <= 10000)"))
+        for(var i = 0,x = 1;i < n;i++){
+            x = (x*a)
+        }
+        if(-1000000 < x < 1000000){
+            console.log(x)
+        }
+    </script> -->
+    
+    <!-- <script id="ch0105/14">//人口增长问题
+        var x = Number(prompt("请输入人口基数"))
+        var n = Number(prompt("请输入年数"))
+        for(var i = 0;i < n;i++){
+            x = x*0.1/100 + x
+        }
+        console.log(x.toFixed(4))
+    </script> -->
+    
+    <!-- <script id="ch0105/15">//银行利息
+        var r = Number(prompt("请输入复合年利率"))
+        var m = Number(prompt("请输入钱"))
+        var y = Number(prompt("请输入投资年数"))
+        for(var i = 0;i < y;i++){
+            m = m*r/100 + m
+        }
+        console.log(parseInt(m))
+    </script> -->
+
+    <!-- <script id="ch0105/16">//买房子
+        var n = Number(prompt("请输入年薪"))
+        var k = Number(prompt("请输入房子价格增长率"))
+        var x = 200
+        for(var i = 1,s = 0;0 < i;i++){
+            if(s <= x && i <= 20){
+                s = i*n
+                if(i !== 1){
+                    x = x*k/100 + x
+                }
+            }else{
+                if(i <= 20){
+                    console.log(i-1)
+                    break
+                }else{
+                    console.log("Impossible")
+                    break
+                }
+
+            }
+        }
+    </script> -->
+
+    <!-- <script id="ch0105/17">//菲波那契数列
+        var k = Number(prompt("请输入个数"))
+        var x = 1
+        var n = 1
+        for(var i = 2,s = 0;i < k;i++){
+            s = x + n
+            if(i%2 !== 0){
+                n = s
+            }else{
+                x = s
+            }
+        }
+        console.log(s)
+    </script> -->
+
+    <!-- <script id="ch0105/18">//鸡尾酒疗法
+        var n = Number(prompt("请输入个疗法的数量"))
+        for(var i = 1,k,s,x,y;i <= n;i++){
+            k = Number(prompt("请输入第"+ i + "个疗法临床实验的总病例数"))
+            s = Number(prompt("请输入第"+ i + "个疗法疗效有效的病例数"))
+            if(i === 1){
+                x = s / k
+            }else{
+                y = s / k
+            }
+            if(y-x > 5/100 && i !=1){
+                console.log("better")
+            }else if(x-y > 5/100 && i !=1){
+                console.log("worse")
+            }else if((y-x <= 5/100 || 5/100 <= x-y) && i !=1){
+                console.log("same")
+            }
+        }
+    </script> -->
+
+    <!-- <script id="ch0105/19">//救援
+        var n = Number(prompt("请输入屋顶数"))
+        for(var i = 1,x,y,k,s,m,h = 0;i <= n;i++){
+            x = Number(prompt("请输入第"+ i + "个屋顶的x坐标"))
+            y = Number(prompt("请输入第"+ i + "个屋顶的y坐标"))
+            k = Number(prompt("请输入第"+ i + "个屋顶的人数"))
+            s = Math.sqrt(x*x + y*y)
+            m = (s / 50 * 2) + k * 90 / 60
+            h = h + m
+        }
+        console.log(Math.round(h))
+    </script> -->
+
+    <script id="ch0105/20">//球弹跳高度的计算
+        var h = Number(prompt("请输入球的初始高度"))
+        var s = h
+        for(var i = 1,x = 0;i <= 10;i++){
+            x = x + h
+            h = h / 2 
+        }
+        console.log((x*2) - s)
+        console.log(h)
+    </script>
+</body>
+</html>
