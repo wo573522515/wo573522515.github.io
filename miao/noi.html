@@ -59,8 +59,8 @@
         var c =Number(prompt("请输入c"))
         var d =Number(prompt("请输入d"))
         var x =Number(prompt("请输入x"))
-        var f = a*(Math.pow(x,3)) + b*Math.pow(x,2) + c*x + d 
-        console.log(f.toFixed(7))
+        var f = (a * (Math.pow(x,3)) + b * Math.pow(x,2) + c * x + d).toFixed(7) 
+        console.log(f)
     </script>
 
     <script id="ch0103/08">//温度表达转化
@@ -71,12 +71,12 @@
 
     <script id="ch0103/09">//与圆相关的计算
         var r =Number(prompt("请输入r"))
-        var x = 2*r
-        var s = 2*π*r
-        var k = π*r*r
-        console.log(x.toFixed(4))
-        console.log(s.toFixed(4))
-        console.log(k.toFixed(4))
+        var x = (2 * r).toFixed(4)
+        var s = (2 * π * r).toFixed(4)
+        var k = (π * r * r).toFixed(4)
+        console.log(x)
+        console.log(s)
+        console.log(k)
     </script>
 
     <script id="ch0103/10">//计算并联电阻的阻值
@@ -89,32 +89,34 @@
     <script id="ch0103/11">//计算浮点数相除的余数
         var a =Number(prompt("请输入a"))
         var b =Number(prompt("请输入b"))
-        var x = a%b
-        console.log(x)
+        var x = a % b
+        console.log(parseFloat(x))
     </script>
 
     <script id="ch0103/12">//计算球的体积
         var r =Number(prompt("请输入r"))
-        var V = 4/3*(3.14*r*r*r)
+        var V = (4 / 3 * (3.14 * r * r * r)).toFixed(2)
         console.log(V)
     </script>
 
     <script id="ch0103/13">//反向输出一个三位数
         var n =Number(prompt("请输入n"))
-        var a = (n - (n%100)) / 100;
-        var c = n%10;
-        var b = (n%100 - c) / 10;
-        var m = c*100 + b*10 + a;
-        console.log(m)
+        var a = (n - (n % 100)) / 100;
+        var c = n % 10;
+        var b = (n % 100 - c) / 10;
+        a = c * 100
+        b = b * 10
+        c = a
+        console.log("a" + "b" + "c")
     </script>
     
     <script id="ch0103/14">//大象喝水
         var h =Number(prompt("请输入h"))
         var r =Number(prompt("请输入r"))
         var Pi = 3.14159
-        var x = Pi*r*r*h
-        var m = 20000/x
-        console.log(parseInt(m))
+        var x = (Pi * r * r * h) / 1000
+        var m = 20 / x
+        console.log(Math.ceil(m))
     </script>
     <script id="ch0103/15">//苹果和虫子
         var n =Number(prompt("请输入n"))
@@ -148,7 +150,7 @@
         var a1 =Number(prompt("请输入a1"))
         var a2 =Number(prompt("请输入a2"))
         var n =Number(prompt("请输入n"))
-        var x = a1 + (a2 - a1)*n
+        var x = a1 + (a2 - a1) * (n - 1)
         console.log(x)
     </script>
 
@@ -418,8 +420,8 @@
             x = x + h
             h = h / 2 
         }
-        console.log((x*2)-s)
-        console.log(h)
+        console.log(((x*2)-s).toFixed(2))
+        console.log(h.toFixed(2))
     </script>
 </body>
 </html>
