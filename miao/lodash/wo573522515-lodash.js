@@ -1,5 +1,5 @@
 var wo573522515 = {
-    chunk:  function chunk(array,size) {
+    chunk: function chunk(array,size) {
         let k=[]
         let s=[]
         for(let i = 0;i < array.length;i++){
@@ -10,5 +10,26 @@ var wo573522515 = {
             }
         }
         return s
+    },
+    compact: function compact(array){
+        let k=[]
+        for(let i=0;i<array.length;i++){
+            if(Boolean(array[i]) ==true){
+                k.push(array[i])
+            }
+        }
+        return k
+    },
+    difference: function difference(array, values){
+        let k =[]
+        for(let i = 1;i<arguments.length;i++){
+            k=k.concat(arguments[i])
+        }
+        for(let j =0;j<array.length;j++){
+            if(k.indexOf(array[j]) !== -1){
+                array.splice([j],1)
+            }
+        }
+        return array
     }
 }
