@@ -45,4 +45,41 @@ var wo573522515 = {
         }
         return array 
     },
+    drop:function drop(array,n){
+        if(n === 0){
+            return array
+        }
+        n = n || 1
+        array.splice(0,n)
+        return array
+    },
+    dropRight:function dropRight(array, n) {
+        if (n === 0) {
+            return array
+        }
+        n = n || 1
+        k = n < array.length ? array.length - n : 0
+        array.splice(k, n)
+
+        return array
+    },
+    fill:function fill(array, value, start, end=array.length){
+        start = start | 0
+        for(let i = start ; i<end;i++){
+            array[i] = value
+        }
+        return array
+    },
+    flatten:function flatten(array){
+        for(let i = 0;i<array.length;i++){
+            if(array[i].constructor == Array){
+                let b = array[i].splice(0,array[i].length)
+                array.splice(i,1)
+                array = array.concat(b)
+                return array
+            }
+        }
+        return array
+    }
+   
 }
