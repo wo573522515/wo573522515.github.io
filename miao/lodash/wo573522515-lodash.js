@@ -28,6 +28,7 @@ var wo573522515 = {
         for(let j =0;j<array.length;j++){
             if(k.indexOf(array[j]) !== -1){
                 array.splice([j],1)
+                j--
             }
         }
         return array
@@ -79,6 +80,30 @@ var wo573522515 = {
                 return array
             }
         }
+        return array
+    },
+    flattenDeep: function flattenDeep(array) {
+        if(array.some(item => item.constructor == Array)){
+        return flattenDeep([].concat(...array))
+        }
+       return array
+    },
+    flattenDepth: function flattenDepth(array,n=1) {
+        if (array.some(item => item.constructor == Array)&&n>0) {
+            return flattenDepth([].concat(...array),n-1)
+        }
+        return array
+    },
+    indexOf:function indexOf(array,value,fromIndex=0){
+        for(var i = 0;i<array.length;i++){
+            if(array[i]==value){
+                return i+fromIndex
+            }
+        }
+        return -1
+    },
+    initial:function initial(array){
+        array.pop()
         return array
     }
    
