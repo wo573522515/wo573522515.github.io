@@ -97,14 +97,32 @@ var wo573522515 = {
     indexOf:function indexOf(array,value,fromIndex=0){
         for(var i = 0;i<array.length;i++){
             if(array[i]==value){
-                return i+fromIndex
+                if(value+fromIndex < 0 ){
+                  return i
+                }else{
+                  return i+fromIndex
+                }
             }
         }
         return -1
-    },
+      },
     initial:function initial(array){
         array.pop()
         return array
+    },
+    intersection:function intersection(arrays){
+        let k =[]
+        let b = []
+        for(let i = 1;i<arguments.length;i++){
+            k=k.concat(arguments[i])
+        }
+        for(let j = 0;j<arguments[0].length;j++){
+            if(k.indexOf(arguments[0][j]) !== -1){
+                b = b.concat(arguments[0].splice(j,1))
+                j--
+            }
+        }
+        return b
     }
    
 }
