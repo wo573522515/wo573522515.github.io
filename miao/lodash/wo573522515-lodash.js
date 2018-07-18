@@ -186,4 +186,29 @@ var wo573522515 = {
         })
         return newAry 
     },
+    pullAll:function pullAll(array, values){
+        var newAry = []
+        array.filter(item =>{
+           if(values.indexOf(item) === -1){
+               newAry.push(item)
+           }
+            return newAry
+        })
+        return newAry 
+    },
+    pullAllBy:function pullAllBy(array, values,iteratee){
+        var val = []
+        for(var i = 0;i<values.length;i++){
+            val.push(values[i][iteratee])
+        }
+        var newAry = []
+        array.filter(item =>{
+           if(val.some(s =>s == item[iteratee])){
+           }else{
+            newAry.push(item)
+           }
+            return newAry
+        })
+        return newAry 
+    }
 }
