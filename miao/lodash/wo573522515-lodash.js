@@ -114,7 +114,7 @@ var wo573522515 = {
     },
     indexOf: function indexOf(array, value, fromIndex) {
         var fromIndex = fromIndex || 0
-        for (var i = 0; i < array.length; i++) {
+        for (var i = fromIndex; i < array.length; i++) {
             if (array[i] == value) {
                 return i
             }
@@ -203,12 +203,18 @@ var wo573522515 = {
         }
         var newAry = []
         array.filter(item =>{
-           if(val.some(s =>s == item[iteratee])){
-           }else{
-            newAry.push(item)
-           }
-            return newAry
+                if(!val.find(s =>s === item[iteratee])){
+                    newAry.push(item)
+                }
         })
         return newAry 
-    }
+    },
+    reverse: function reverse(array) {
+        var result = []
+        for (var i = array.length - 1; i >= 0; i--) {
+            result.push(array[i])
+        }
+
+        return result
+    },
 }
